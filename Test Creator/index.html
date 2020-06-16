@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Creator</title>
+    <!---Google Font link-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+
+    <!--Font awesome link-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+
+      <!---CSS file-->
+    <link rel="stylesheet" type="text/css" href="style.css">  
+
+</head>
+<body>
+    <div id="node-blank">
+    <form id="nodeblank" name ="nodebalnk">
+        <h5 id="queno">1.</h5><br>
+        <input type="text" placeholder="Write your question here" id="ques" name="ques"><br>
+        <input type="text" placeholder="Option 1" id="opt1" name="opt1"><br>
+        <input type="text" placeholder="Option 2" id="opt2" name="opt2"><br>
+        <input type="text" placeholder="Option 3" id="opt3" name="opt3"><br>
+        <input type="text" placeholder="Option 4" id="opt4" name="opt4"><br>
+        <input type="text" placeholder="Answer"   id="ans"  name="ans"><br>
+        <input type="button" value="Next" onclick="Saveinfo();">
+        <div id="savetestbtn" style="visibility: hidden;">
+        <input type="button" value="Save Test" onclick="Savetest();">
+        </div>
+     
+    </form>
+    </div>
+    <div id="node-list" style="visibility: hidden;">
+        <h1 id="question1"></h1>
+        <h5 id="1option1"></h5><br>
+        <h5 id="1option2"></h5><br>
+        <h5 id="1option3"></h5><br>
+        <h5 id="1option4"></h5><br>
+        <h5 id="1answer"></h5><br><hr>
+
+        <h1 id="question2"></h1>
+        <h5 id="2option1"></h5><br>
+        <h5 id="2option2"></h5><br>
+        <h5 id="2option3"></h5><br>
+        <h5 id="2option4"></h5><br>
+        <h5 id="2answer"></h5><br><hr>
+
+        <h1 id="question3"></h1>
+        <h5 id="3option1"></h5><br>
+        <h5 id="3option2"></h5><br>
+        <h5 id="3option3"></h5><br>
+        <h5 id="3option4"></h5><br>
+        <h5 id="3answer"></h5><br><hr>
+
+
+
+
+    </div>
+
+
+     <!---JS File link-->
+     <script type="text/javascript" src="s.js"></script> 
+  
+
+    <!---Jquery-->    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+</body>
+</html>
