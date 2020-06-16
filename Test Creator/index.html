@@ -15,16 +15,44 @@
 
 </head>
 <body>
-    <div id="node-blank">
+    <div id="info-blank">
+        <form id="infoblank" name="infoblank">
+            <p>Enter the Test Name</p>
+            <input type="text" placeholder="Test Name" id="testname" name="testname">
+            <p>Choose the theme</p>
+                <select id="theme-dd"> 
+                    <option value="Physics">Physics</option> 
+                    <option value="Chemistry">Chemistry</option> 
+                    <option value="Maths">Maths</option> 
+                </select>
+            
+
+            <p>Enter score for each question</p>
+            <input type="text" placeholder="Score(In Digits)" id="score" name="score">
+            <p>Chose the time for each question</p>
+                <select id="time-dd"> 
+                    <option value="0.5">30 Seconds</option> 
+                    <option value="1">1 Minute</option> 
+                    <option value="2">2 Minutes</option> 
+                    <option value="5">5 Minutes</option> 
+                </select>
+            <br>
+           <input type="button" value="Next" onclick="Saveinfo();">
+            <input type="button" value="Cancel" onclick="cancel();">
+        </form>
+   </div>
+    <div id="node-blank" style="visibility: hidden;" >
     <form id="nodeblank" name ="nodebalnk">
         <h5 id="queno">1.</h5><br>
-        <input type="text" placeholder="Write your question here" id="ques" name="ques"><br>
-        <input type="text" placeholder="Option 1" id="opt1" name="opt1"><br>
-        <input type="text" placeholder="Option 2" id="opt2" name="opt2"><br>
-        <input type="text" placeholder="Option 3" id="opt3" name="opt3"><br>
-        <input type="text" placeholder="Option 4" id="opt4" name="opt4"><br>
-        <input type="text" placeholder="Answer"   id="ans"  name="ans"><br>
-        <input type="button" value="Next" onclick="Saveinfo();">
+        <input type="text" placeholder="Write your question here" id="ques" name="ques"><input type="button" value="CLR" onclick="clearques();"><br>
+        <input type="text" placeholder="Option 1" id="opt1" name="opt1"><input type="button" value="CLR" onclick="clearopt1();"><br>
+        <input type="text" placeholder="Option 2" id="opt2" name="opt2"><input type="button" value="CLR" onclick="clearopt2();"><br>
+        <input type="text" placeholder="Option 3" id="opt3" name="opt3"><input type="button" value="CLR" onclick="clearopt3();"><br>
+        <input type="text" placeholder="Option 4" id="opt4" name="opt4"><input type="button" value="CLR" onclick="clearopt4();"><br>
+        <input type="text" placeholder="Answer"   id="ans"  name="ans"><input type="button" value="CLR" onclick="clearans();"><br>
+        <input type="button" value="Reset" onclick="Resetinfo();">
+        <input type="button" value="Next" onclick="Savenode();">
+        
         <div id="savetestbtn" style="visibility: hidden;">
         <input type="button" value="Save Test" onclick="Savetest();">
         </div>
@@ -32,31 +60,32 @@
     </form>
     </div>
     <div id="node-list" style="visibility: hidden;">
+        <h2 id="TName"></h2>
+        <h3 id="Ttheme"></h3>
+        <h4 id="totaltime"></h4>
+        <h4 id="totalscore"></h4>
+
         <h1 id="question1"></h1>
         <h5 id="1option1"></h5><br>
         <h5 id="1option2"></h5><br>
         <h5 id="1option3"></h5><br>
         <h5 id="1option4"></h5><br>
-        <h5 id="1answer"></h5><br><hr>
+        <h5 id="1answer" style="color: green;"></h5><br><hr>
 
         <h1 id="question2"></h1>
         <h5 id="2option1"></h5><br>
         <h5 id="2option2"></h5><br>
         <h5 id="2option3"></h5><br>
         <h5 id="2option4"></h5><br>
-        <h5 id="2answer"></h5><br><hr>
+        <h5 id="2answer" style="color: green;"></h5><br><hr>
 
         <h1 id="question3"></h1>
         <h5 id="3option1"></h5><br>
         <h5 id="3option2"></h5><br>
         <h5 id="3option3"></h5><br>
         <h5 id="3option4"></h5><br>
-        <h5 id="3answer"></h5><br><hr>
-
-
-
-
-    </div>
+        <h5 id="3answer" style="color: green;"></h5><br><hr>
+   </div>
 
 
      <!---JS File link-->
